@@ -1,0 +1,85 @@
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ------------------------
+# Virtual environments
+# ------------------------
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# ------------------------
+# IDEs and editors
+# ------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------
+# Databricks & Spark artifacts
+# ------------------------
+.sparkStaging/
+.metastore_db/
+derby.log
+spark-warehouse/
+delta_log/
+.delta/
+
+# prevent committing actual Delta table data outputs
+data/bronze/
+data/silver/
+data/gold/
+
+# ------------------------
+# Logs
+# ------------------------
+*.log
+logs/
+nohup.out
+
+# ------------------------
+# Secrets and credentials
+# ------------------------
+*.env
+.env.*
+secrets/
+*.pem
+*.key
+*.crt
+__secrets__/
+# Databricks config (CLI)
+.databricks/
+
+# ------------------------
+# Docker
+# ------------------------
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# ------------------------
+# Jenkins
+# ------------------------
+*.jenkins
+workspace/
