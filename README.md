@@ -48,7 +48,7 @@ The use case is based on **renewable energy demand forecasting in Spain**, lever
 
 ## 🚀 Getting Started  
 
-### 1. Clone the repo & install dependencies  
+1. Clone the repo & install dependencies  
 ```bash
 git clone https://github.com/<your-username>/spain-energy.git
 cd spain-energy
@@ -56,24 +56,23 @@ python -m venv venv
 source venv/bin/activate   # (Windows: venv\Scripts\activate)
 pip install -r requirements.txt
 
-### 2. Download the Spain energy + weather datasets from Kaggle and place them in data/:
+2. Download the Spain energy + weather datasets from Kaggle and place them in data/:
 energy_dataset.csv
 weather_features.csv
 
-### 3. Run pipeline locally
-
+3. Run pipeline locally:
 python jobs/01_bronze_ingest.py
 python jobs/02_silver_join.py
 python jobs/03_gold_features.py
 python jobs/04_forecast.py
 python jobs/05_optimize.py
 
-### 4. Launch API service
+Launch API service:
 uvicorn api.main:app --reload --port 8000
 
 Endpoints:
 - POST /runs/full → run full pipeline
 - GET /plans → fetch optimization plan
 
-### 5. Run tests
+5. Run tests
 pytest -q
