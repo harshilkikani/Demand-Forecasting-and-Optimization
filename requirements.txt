@@ -1,3 +1,10 @@
 pyspark
 delta-spark
 pytest
+fastapi
+uvicorn
+xgboost
+ortools
+mlflow
+pandas
+scikit-learn
